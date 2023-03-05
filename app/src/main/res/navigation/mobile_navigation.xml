@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.example.examen_pmdm_repaso.ui.alimento.AlimentoFragment"
+        android:label="@string/menu_alimentos"
+        tools:layout="@layout/fragment_alimento" />
+
+    <fragment
+        android:id="@+id/nav_gallery"
+        android:name="com.example.examen_pmdm_repaso.ui.receta.RecetaFragment"
+        android:label="@string/menu_recetas"
+        tools:layout="@layout/fragment_receta" />
+
+    <fragment
+        android:id="@+id/nav_slideshow"
+        android:name="com.example.examen_pmdm_repaso.ui.slideshow.DietaFragment"
+        android:label="@string/menu_dietas"
+        tools:layout="@layout/fragment_dieta" />
+    <fragment
+        android:id="@+id/verDietaFragment"
+        android:name="com.example.examen_pmdm_repaso.ui.slideshow.VerDietaFragment"
+        android:label="fragment_ver_dieta"
+        tools:layout="@layout/fragment_ver_dieta" />
+    <fragment
+        android:id="@+id/crearDietaFragment"
+        android:name="com.example.examen_pmdm_repaso.ui.slideshow.CrearDietaFragment"
+        android:label="fragment_crear_dieta"
+        tools:layout="@layout/fragment_crear_dieta" >
+        <action
+            android:id="@+id/action_crearDietaFragment_to_verDietaFragment"
+            app:destination="@id/verDietaFragment" />
+    </fragment>
+</navigation>
